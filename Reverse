@@ -1,0 +1,21 @@
+// version 1 / => ; .Select
+var input = "Hello world";
+var result = String.Join(" ",
+                  input.Split(' ')
+                       .Select(word => new string(word.Reverse().ToArray())));
+
+Console.WriteLine(result);
+
+// version 2 / Substring()
+string Rev(string input1) 
+{
+    if (input1.Length == 0)
+    {
+        return input1;
+    }
+
+    return Rev(input1.Substring(1)) + input1[0];
+    }
+    
+string input1 = "Hello World";
+Console.WriteLine(Rev(input1));
