@@ -19,16 +19,13 @@ Console.WriteLine(Themax(a));
 
 
 //Recursion
-int Themax(int[] n, int i)
-   
+int Themax(int[] arr, int n)
 {
-    if (i == 0)
+    if (n == arr.Length)
     {
         return 0;
     }
-    return Themax();
-   
+    return Math.Max(arr[n], Themax(arr, n ++));
 }
-
 int[] n = new int[] { 5, 1, 8, 9, 65, 7 };
-Console.WriteLine();
+Console.WriteLine(Themax);
